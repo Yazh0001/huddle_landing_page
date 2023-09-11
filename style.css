@@ -1,0 +1,128 @@
+:root{
+    /* Colors */
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+
+    /* Fonts */
+    --headings: 'Poppins', sans-serif;
+    --body:'Open Sans', sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    display: grid;
+    grid-template: auto, 1fr auto / auto, 1fr auto;
+    background-image: url(./images/bg-desktop.svg);
+    background-color: var(--Violet);
+}
+
+.header{
+    padding: 3em;
+}
+
+.main{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer{
+    display: flex;
+    justify-content: end;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.bigimg{
+    width: 80%;
+}
+
+.main-right{
+    padding: 3em;
+}
+h1{
+    font-family: var(--headings);
+    font-weight: 600;
+    color: white;
+    font-size: 30pt;
+}
+
+p{
+    font-family: var(--body);
+    color: rgba(255, 255, 255, 0.722);
+    font-size: 16px;
+    line-height: 150%;
+}
+
+button{
+    background-color: white;
+    color: var(--Violet);
+    font-weight: 400;
+    font-size: large;
+
+    padding: 1em;
+    width: 12em;
+    border-radius: 2em;
+    border-width: 0px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.323);
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+button:hover{
+    background-color: var(--SoftMagenta);
+    color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.678);
+
+}
+
+.icon{
+    height: 30px;
+    cursor: pointer;
+    transition: .2s;
+    padding: .5em;
+}
+
+.icon:hover{
+    fill: var(--SoftMagenta);
+}
+
+.logo{
+    height: 50px;
+}
+
+
+@media only screen and (max-width: 1200px){
+    .main{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .main-right{
+        text-align: center;
+    }
+
+    .footer{
+        justify-content: center;
+    }
+}
+
+
+@media only screen and (max-width: 375px){
+    body{
+        background-image: url(./images/bg-mobile.svg);
+    }
+
+    h1{
+        font-size: larger;
+    }
+    .header{
+        padding: .5em;
+    }
+
+    .logo{
+        height: 20px;
+    }
+
+}
